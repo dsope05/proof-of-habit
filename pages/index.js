@@ -6,7 +6,6 @@ import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../magic/UserContext";
-import Newsletter from "./newsletter";
 import { Analytics } from "@vercel/analytics/react";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
