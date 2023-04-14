@@ -1,8 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import styles from "../styles/sign-up.module.css";
-import StepWizard from "react-step-wizard";
 import dynamic from "next/dynamic";
-import Stepper from "../components/form-wizard/stepper";
+import Welcome from "../components/stepper";
 import { useRouter } from "next/router";
 import { UserContext } from "../magic/UserContext";
 import {
@@ -17,7 +16,6 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Button from "@mui/material/Button";
-import checkSubscription from "../apiUtils/subscriptionCheck";
 
 export default function Signup() {
   const [user, setUser] = useContext(UserContext);
@@ -28,6 +26,10 @@ export default function Signup() {
   const { freeTrial, subscription } = useSelector(
     selectSubscriptionStatusState
   );
+  useEffect(() => {
+    updateView('main')
+  },[view])
+  /*
   useEffect(() => {
     const asyncCalls = async () => {
       if (user?.email && !subscription && !freeTrial) {
@@ -50,7 +52,9 @@ export default function Signup() {
     };
     asyncCalls();
   }, [user]);
+  */
 
+  /*
   useEffect(() => {
     const asyncCalls = async () => {
       if (
@@ -70,6 +74,7 @@ export default function Signup() {
     };
     asyncCalls();
   }, [user, subscription, freeTrial]);
+  */
 
   const goBack = () => {
     router.push("/");
@@ -99,7 +104,7 @@ export default function Signup() {
             fontSize: "24px",
           }}
         >
-          nujen
+          PoH
         </h3>
       </div>
       {view === "loading" && (
@@ -109,10 +114,10 @@ export default function Signup() {
           </div>
         </>
       )}
-      {view === "active" && (
+      {view === "main" && (
         <>
           <div className={styles.main}>
-            <Stepper />
+            <Welcome />
           </div>
         </>
       )}

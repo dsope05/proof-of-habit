@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: 'https://nujen.framer.website/',
+        destination: '/welcome',
         permanent: false,
         basePath: false,
       },
