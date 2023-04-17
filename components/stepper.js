@@ -114,7 +114,7 @@ export default function HorizontalLinearStepper() {
         Put in 66 reps for the type of person you wish to become.
       </div>
       <Modal
-        open={true}
+        open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
