@@ -141,24 +141,24 @@ export default function HorizontalLinearStepper() {
       <div style={{ display: "flex" }}>
         <div style={{ display: "flex", flexDirection: "column", width: "50%" }}>
           <div
-            style={{ marginBottom: "20px" }}
+            style={{ marginBottom: "20px", color: '#000' }}
             className={styles.section}
           >
             How it works:
           </div>
-          <div style={{ marginBottom: "20px" }}>
-            <b>0. Commit</b> ✍️ <br />
+          <div style={{ marginBottom: "20px", color: '#000' }}>
+            <b className={styles.darkColor}>0. Commit</b> ✍️ <br />
             Commit to the 66 days of PoH challenge by filling out the form
             below. You have until April 24th, 2024 to join.
           </div>
-          <div style={{ marginBottom: "20px" }}>
-            <b>1. Prime</b> 🫡 <br />
+          <div className={styles.darkColor} style={{ marginBottom: "20px" }}>
+            <b className={styles.darkColor}>1. Prime</b> 🫡 <br />
             We&apos;ll be sending you 2 emails every week to prime you for the
             challenge. These messages will teach you how to incorporate The Four
             Laws of Behavior Change by James Clear.
             <br />
             <div className={styles.list}>
-              <ul>
+              <ul className={styles.darkColor}>
                 <li>April 24-May 1: Make it obvious</li>
                 <li>May 1-8: Make it attractive</li>
                 <li>May 8-15: Make it easy</li>
@@ -166,7 +166,7 @@ export default function HorizontalLinearStepper() {
               </ul>
             </div>
           </div>
-          <div style={{ marginBottom: "20px" }}>
+          <div className={styles.darkColor} style={{ marginBottom: "20px" }}>
             <b>2. Act</b> 👏
             <br />
             If you complete the assignments during the priming phase, you&apos;ll be
@@ -174,7 +174,7 @@ export default function HorizontalLinearStepper() {
             #66DaysOfPoH challenge.
             <br />
           </div>
-          <div style={{ marginBottom: "20px" }}>
+          <div className={styles.darkColor} style={{ marginBottom: "20px" }}>
             <b>3. Celebrate</b> 🥳
             <br />
             Those who put in the reps at least 75% of the 66 days will receive a
@@ -194,7 +194,7 @@ export default function HorizontalLinearStepper() {
             Ready to commit?
           </div>
           <div>
-            <span style={{ marginRight: "10px" }}>Twitter Handle:</span>
+            <span  className={styles.darkColor} style={{ marginRight: "10px" }}>Twitter Handle:</span>
             <Input
               placeholder="@seemcat"
               variant="standard"
@@ -202,7 +202,7 @@ export default function HorizontalLinearStepper() {
             />
           </div>
           <div>
-            <span style={{ marginRight: "10px" }}>
+            <span className={styles.darkColor} style={{ marginRight: "10px" }}>
               The person you wish to become¹:
             </span>
             <br />
@@ -213,7 +213,7 @@ export default function HorizontalLinearStepper() {
             />
           </div>
           <div>
-            <span style={{ marginRight: "10px" }}>Email</span>
+            <span  className={styles.darkColor} style={{ marginRight: "10px" }}>Email</span>
             <Input
               placeholder="poh@gmail.com"
               variant="standard"
@@ -233,14 +233,20 @@ export default function HorizontalLinearStepper() {
             </Button>
           </div>
           <div className={styles.note}>
-            - - - <br />
+            <div className={styles.darkColor}>
+            - - -
+            </div>
             <br />
-            ¹ Think about the goal you want to achieve, and then the type of
-            person who can achieve this goal.
+            <div className={styles.darkColor}>
+              ¹ Think about the goal you want to achieve, and then the type of
+              person who can achieve this goal.
+            </div>
             <br />
             <br />
-            E.g. Goal = get a hot bod by summertime. Identity I aspire towards =
-            the type of person who never misses a workout.{" "}
+            <div className={styles.darkColor}>
+              E.g. Goal = get a hot bod by summertime. Identity I aspire towards =
+              the type of person who never misses a workout.{" "}
+            </div>
           </div>
         </div>
         <div
@@ -253,7 +259,7 @@ export default function HorizontalLinearStepper() {
           {list.map((poh) => {
             return (
               <div key={poh.handle}>
-                <span className={styles.handle}><a href={`https://twitter.com/${poh.handle}`}>{poh.handle}</a></span> wishes to become <span className={styles.wish}>{poh.wish}</span>
+                <span className={styles.handle}><a href={`https://twitter.com/${poh.handle}`}>{poh.handle}</a></span> <span className={styles.darkColor}> wishes to become </span><span className={styles.wish}>{poh.wish}</span>
               </div>
             );
           })}
