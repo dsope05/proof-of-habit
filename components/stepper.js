@@ -127,7 +127,7 @@ export default function HorizontalLinearStepper() {
             <Link
               target="_blank"
               rel="noopener"
-              href="https://twitter.com/intent/tweet?text=🫡+I+commit+to+the+%2360DaysOfPoH+challenge.+%0a%0a+Wanna+join?+https://proofofhabit.app/%0a%0a+cc+@proofofhabit"
+              href="https://twitter.com/intent/tweet?text=🫡+I+commit+to+the+%2366DaysOfPoH+challenge.+%0a%0a+Wanna+join?+https://proofofhabit.app/%0a%0a+cc+@proofofhabit"
 
             >
               <Button variant="outlined" sx={{ mt: 2 }}>
