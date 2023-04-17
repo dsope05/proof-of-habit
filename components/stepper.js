@@ -1,27 +1,24 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  selectFormDataState,
-  setFormDataState,
-} from "../store/formDataSlice";
+import { selectFormDataState, setFormDataState } from "../store/formDataSlice";
 import styles from "../styles/sign-up.module.css";
 import { UserContext } from "../magic/UserContext";
 import Input from "@mui/material/Input";
 import Button from "@mui/material/Button";
-import Modal from '@mui/material/Modal';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 
 const modalStyle = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor: "background.paper",
+  border: "2px solid #000",
   boxShadow: 24,
   p: 4,
 };
@@ -107,7 +104,15 @@ export default function HorizontalLinearStepper() {
 
   return (
     <>
-      <div className={styles.title}>#66DAYSOFPOH</div>
+      <style>
+        @import
+        url(&apos;https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;0,200;0,400;0,500;0,600;0,900;1,100;1,200;1,400;1,500;1,800;1,900&display=swap&apos;);
+      </style>
+      <div className={styles.title}>#66DaysOfPoH</div>
+      <div className={styles.date}>May 22-July 27, 2023</div>
+      <div className={styles.subtitle}>
+        Put in 66 reps for the type of person you wish to become.
+      </div>
       <Modal
         open={open}
         onClose={handleClose}
@@ -116,10 +121,15 @@ export default function HorizontalLinearStepper() {
       >
         <Box sx={modalStyle}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            You&apos;re in! Now, for your first HW: tell your frens who you aspire to become...
+            You&apos;re in! Now, for your first HW: tell your frens who you
+            aspire to become...
           </Typography>
-          <div style={{ display: 'flex', justifyContent: 'center'}}>
-            <Link target="_blank" rel="noopener" href="https://twitter.com/compose/tweet">
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Link
+              target="_blank"
+              rel="noopener"
+              href="https://twitter.com/compose/tweet"
+            >
               <Button variant="outlined" sx={{ mt: 2 }}>
                 tweet this
               </Button>
@@ -129,42 +139,83 @@ export default function HorizontalLinearStepper() {
       </Modal>
       <div style={{ display: "flex" }}>
         <div style={{ display: "flex", flexDirection: "column", width: "50%" }}>
-          <div style={{ marginBottom: "20px", width: "300px" }}>
-            Commit to putting in reps for the type of person you wish to become.
-          </div>
-          <div style={{ marginBottom: "10px", width: "300px" }}>
+          <div
+            style={{ marginBottom: "20px", width: "300px" }}
+            className={styles.section}
+          >
             How it works:
           </div>
-          <div style={{ marginBottom: "10px", width: "300px" }}>1. prime</div>
-          <div style={{ marginBottom: "10px", width: "300px" }}>2. act</div>
-          <div style={{ marginBottom: "10px", width: "300px" }}>
-            2. celebrate
+          <div style={{ marginBottom: "20px", width: "300px" }}>
+            <b>0. Commit</b> ✍️ <br />
+            Commit to the 66 days of PoH challenge by filling out the form
+            below. You have until April 24th, 2024 to join.
           </div>
-          <div style={{ marginBottom: "10px", width: "300px" }}>
-            READY TO make a Commit?
+          <div style={{ marginBottom: "20px", width: "300px" }}>
+            <b>1. Prime</b> 🫡 <br />
+            We&apos;ll be sending you 2 text messages every week to prime you for the
+            challenge. These messages will teach you how to incorporate The Four
+            Laws of Behavior Change by James Clear.
+            <br />
+            <div className={styles.list}>
+              <ul>
+                <li>April 24-May 1: Make it obvious</li>
+                <li>May 1-8: Make it attractive</li>
+                <li>May 8-15: Make it easy</li>
+                <li>May 15-22nd: Make It Satisfying</li>
+              </ul>
+            </div>
+          </div>
+          <div style={{ marginBottom: "20px", width: "300px" }}>
+            <b>2. Act</b> 👏
+            <br />
+            If you complete the assignments during the priming phase, you&apos;ll be
+            invited to 1) be the first users of PoH, and 2) participate in the
+            #66DaysOfPoH challenge.
+            <br />
+          </div>
+          <div style={{ marginBottom: "20px", width: "300px" }}>
+            <b>3. Celebrate</b> 🥳
+            <br />
+            Those who put in the reps at least 75% of the 66 days will receive a
+            personalized digital collectible that represents their Proof of
+            Habit.
+          </div>
+          <div
+            style={{
+              marginTop: "20px",
+              marginBottom: "10px",
+              width: "300px",
+              "font-family": "Chivo Mono, monospace",
+              "font-style": "italic",
+              "font-weight": 800,
+            }}
+            className={styles.section}
+          >
+            Ready to commit?
           </div>
           <div>
             <span style={{ marginRight: "10px" }}>Twitter Handle:</span>
             <Input
-              placeholder="@pitou"
+              placeholder="@seemcat"
               variant="standard"
               onChange={(e) => onChange(e, "handle")}
             />
           </div>
           <div>
             <span style={{ marginRight: "10px" }}>
-              The person you wish to become:
+              The person you wish to become¹:
             </span>
-            <Input
-              placeholder="Be a strong cat"
+            <br />
+            <textarea
+              placeholder="the type of person who never misses a workout"
               variant="standard"
               onChange={(e) => onChange(e, "wish")}
             />
           </div>
           <div>
-            <span style={{ marginRight: "10px" }}>phone #</span>
+            <span style={{ marginRight: "10px" }}>Phone #²</span>
             <Input
-              placeholder="555-555-5555"
+              placeholder="(555) 555-5555"
               variant="standard"
               onChange={(e) => onChange(e, "phone")}
             />
@@ -177,9 +228,23 @@ export default function HorizontalLinearStepper() {
               width: "50%",
             }}
           >
-            <Button variant="outlined" onClick={submit}>
+            <Button variant="contained" onClick={submit}>
               LFG
             </Button>
+          </div>
+          <div className={styles.note}>
+            - - - <br />
+            <br />
+            ¹ Think about the goal you want to achieve, and then the type of
+            person who can achieve this goal.
+            <br />
+            <br />
+            E.g. Goal = get a hot bod by summertime. Identity I aspire towards =
+            the type of person who never misses a workout.{" "}
+          </div>
+          <div className={styles.note}>
+            ² We will never share your private info with an unauthorized 3rd
+            party.
           </div>
         </div>
         <div
@@ -192,7 +257,7 @@ export default function HorizontalLinearStepper() {
           {list.map((poh) => {
             return (
               <div key={poh.handle}>
-                {poh.handle}: {poh.wish}
+                <span className={styles.handle}><a href={`https://twitter.com/${poh.handle}`}>{poh.handle}</a></span> wishes to become <span className={styles.wish}>{poh.wish}</span>
               </div>
             );
           })}

@@ -1,7 +1,7 @@
 .main {
   padding: 6rem;
   min-height: 100vh;
-  font-family: "Nunito Sans";
+  font-family: "Courier New";
   background-color: lavender;
 }
 
@@ -49,7 +49,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  font-family: "Nunito Sans";
+  font-family: "Courier New";
   background-color: lavender;
 }
 
@@ -76,11 +76,71 @@
 
 .title {
   text-align: center;
-  font-size: 36px;
+  font-size: 50px;
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
-  font-family: "Nunito Sans";
+  margin-bottom: 10px;
+  font-family: 'Chivo Mono', monospace;
+  font-style: italic;
+  font-weight: 900;
+  color: black;
+}
+
+.date {
+  text-align: center;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-family: 'Chivo Mono', monospace;
+  font-style: italic;
+  font-weight: 4f00;
+  color: black;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+  font-family: 'Chivo Mono', monospace;
+  font-style: italic;
+  font-weight: 100;
+  color: black;
+}
+
+.list {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.note {
+  margin-top: 20px;
+  width: 300px;
+}
+
+.handle {
+  font-family: 'Chivo Mono', monospace;
+  font-style: normal;
+  font-weight: 100;
+  color: blue;
+}
+
+.wish {
+  font-family: 'Chivo Mono', monospace;
+  font-style: italic;
+  font-weight: 600;
+  color: purple;
+}
+
+.section {
+  font-size: 18px;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-family: 'Chivo Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
   color: black;
 }
 
