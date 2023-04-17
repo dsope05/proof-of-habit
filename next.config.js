@@ -1,15 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/welcome',
-        permanent: false,
-        basePath: false,
-      },
-    ]
-  },
   reactStrictMode: false,
   env: {
     SITE_KEY: process.env.SITE_KEY,
