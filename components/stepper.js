@@ -121,8 +121,7 @@ export default function HorizontalLinearStepper() {
       >
         <Box sx={modalStyle}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            You&apos;re in! Now, for your first HW: tell your frens who you
-            aspire to become...
+            You&apos;re in! Now, for your first assignment: tell your friends you have committed to the #66DaysOfPoH challenge.
           </Typography>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Link
