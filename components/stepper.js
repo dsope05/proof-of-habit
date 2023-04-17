@@ -128,7 +128,8 @@ export default function HorizontalLinearStepper() {
             <Link
               target="_blank"
               rel="noopener"
-              href="https://twitter.com/compose/tweet"
+              href="https://twitter.com/intent/tweet?text=🫡%20I%20commit%20to%20the%2066%20Days%20of%20@proofofhabit%20challenge.%20%0a%0a<ATTACH_SCREENSHOT_OF_POH>%0a%0acc%20@_buildspace%20@_nightsweekends%20"
+
             >
               <Button variant="outlined" sx={{ mt: 2 }}>
                 tweet this
