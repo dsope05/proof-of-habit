@@ -215,7 +215,7 @@ export default function HorizontalLinearStepper() {
           <div>
             <span style={{ marginRight: "10px" }}>Email</span>
             <Input
-              placeholder="pitou@gmail.com"
+              placeholder="poh@gmail.com"
               variant="standard"
               onChange={(e) => onChange(e, "phone")}
             />
