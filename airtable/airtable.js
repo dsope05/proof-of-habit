@@ -4,6 +4,30 @@ const base = new Airtable({
   apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
 }).base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID);
 
+export const createPoH = ({ handle, phone, wish, res }) => {
+  base("PoH").create(
+    [
+      {
+        fields: {
+          handle,
+          phone,
+          wish,
+        },
+      },
+    ],
+    function (err, records) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      records.forEach(function (record) {
+        console.log("PoH created", record.get("handle"));
+      });
+      res.status(200).json({ records });
+    }
+  );
+};
+
 export function createNewsletterRecord(email, chatGPTResponse, res) {
   base("v.5").create(
     [
@@ -49,6 +73,32 @@ export const createFreeTrialRecord = ({ email, handle }) => {
     }
   );
 };
+export const queryPoH = ({ res }) => {
+  const allPoH = [];
+  base('PoH').select({
+    maxRecords: 100,
+    view: "Grid view"
+  }).eachPage(function page(records, fetchNextPage) {
+    // This function (`page`) will get called for each page of records.
+
+    records.forEach(function(record) {
+        console.log('Retrieved', record.get('handle'));
+        allPoH.push({
+          handle: record.get('handle'),
+          wish: record.get('wish')
+        })
+    });
+
+    // To fetch the next page of records, call `fetchNextPage`.
+    // If there are more records, `page` will get called again.
+    // If there are no more records, `done` will get called.
+    fetchNextPage();
+
+  }, function done(err) {
+    res.send(allPoH)
+    if (err) { console.error(err); return; }
+  });
+}
 
 export const queryFreeTrialRecord = async ({ email, handle }) => {
   console.log("EMAIL", email);
@@ -84,8 +134,8 @@ export const queryFreeTrialRecord = async ({ email, handle }) => {
         console.log("records", records);
         return res("noRecord");
       });
-  });
-};
+    })}
+    
 
 export function createContentRecord({ email, content, res }) {
   base("content").create(
