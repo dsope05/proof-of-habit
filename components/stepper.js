@@ -61,7 +61,6 @@ export default function HorizontalLinearStepper() {
   const router = useRouter();
   const dispatch = useDispatch();
   React.useEffect(() => {
-    console.log("LFG");
     const callPoH = async () => {
       const res = await fetch("/api/getPoH", {
         method: "POST",
@@ -101,6 +100,7 @@ export default function HorizontalLinearStepper() {
         openModal(true);
       });
   };
+  console.log('list', list)
 
   return (
     <>
@@ -140,17 +140,17 @@ export default function HorizontalLinearStepper() {
       <div style={{ display: "flex" }}>
         <div style={{ display: "flex", flexDirection: "column", width: "50%" }}>
           <div
-            style={{ marginBottom: "20px", width: "300px" }}
+            style={{ marginBottom: "20px" }}
             className={styles.section}
           >
             How it works:
           </div>
-          <div style={{ marginBottom: "20px", width: "300px" }}>
+          <div style={{ marginBottom: "20px" }}>
             <b>0. Commit</b> ✍️ <br />
             Commit to the 66 days of PoH challenge by filling out the form
             below. You have until April 24th, 2024 to join.
           </div>
-          <div style={{ marginBottom: "20px", width: "300px" }}>
+          <div style={{ marginBottom: "20px" }}>
             <b>1. Prime</b> 🫡 <br />
             We&apos;ll be sending you 2 text messages every week to prime you for the
             challenge. These messages will teach you how to incorporate The Four
@@ -165,7 +165,7 @@ export default function HorizontalLinearStepper() {
               </ul>
             </div>
           </div>
-          <div style={{ marginBottom: "20px", width: "300px" }}>
+          <div style={{ marginBottom: "20px" }}>
             <b>2. Act</b> 👏
             <br />
             If you complete the assignments during the priming phase, you&apos;ll be
@@ -173,7 +173,7 @@ export default function HorizontalLinearStepper() {
             #66DaysOfPoH challenge.
             <br />
           </div>
-          <div style={{ marginBottom: "20px", width: "300px" }}>
+          <div style={{ marginBottom: "20px" }}>
             <b>3. Celebrate</b> 🥳
             <br />
             Those who put in the reps at least 75% of the 66 days will receive a
@@ -184,7 +184,6 @@ export default function HorizontalLinearStepper() {
             style={{
               marginTop: "20px",
               marginBottom: "10px",
-              width: "300px",
               "font-family": "Chivo Mono, monospace",
               "font-style": "italic",
               "font-weight": 800,

@@ -117,7 +117,6 @@
 
 .note {
   margin-top: 20px;
-  width: 300px;
 }
 
 .handle {
@@ -154,16 +153,12 @@
   .main {
     padding: 2rem;
     min-height: 100vh;
-    background: linear-gradient(to bottom,transparent,rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-    background-color: #452c63;
   }
 
 @media (max-width: 700px) {
   .main {
     padding: 2rem;
     min-height: 100vh;
-    background: linear-gradient(to bottom,transparent,rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-    background-color: #452c63;
   }
 }
 
