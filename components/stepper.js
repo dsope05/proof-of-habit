@@ -153,7 +153,7 @@ export default function HorizontalLinearStepper() {
           </div>
           <div style={{ marginBottom: "20px" }}>
             <b>1. Prime</b> 🫡 <br />
-            We&apos;ll be sending you 2 text messages every week to prime you for the
+            We&apos;ll be sending you 2 emails every week to prime you for the
             challenge. These messages will teach you how to incorporate The Four
             Laws of Behavior Change by James Clear.
             <br />
