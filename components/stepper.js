@@ -124,7 +124,7 @@ export default function HorizontalLinearStepper() {
             You&apos;re in! Now, for your first HW: tell your frens who you
             aspire to become...
           </Typography>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div style={{ display: "flex", justifyContent: "center" }}>/
             <Link
               target="_blank"
               rel="noopener"
@@ -213,9 +213,9 @@ export default function HorizontalLinearStepper() {
             />
           </div>
           <div>
-            <span style={{ marginRight: "10px" }}>Phone #²</span>
+            <span style={{ marginRight: "10px" }}>Email</span>
             <Input
-              placeholder="(555) 555-5555"
+              placeholder="pitou@gmail.com"
               variant="standard"
               onChange={(e) => onChange(e, "phone")}
             />
@@ -241,10 +241,6 @@ export default function HorizontalLinearStepper() {
             <br />
             E.g. Goal = get a hot bod by summertime. Identity I aspire towards =
             the type of person who never misses a workout.{" "}
-          </div>
-          <div className={styles.note}>
-            ² We will never share your private info with an unauthorized 3rd
-            party.
           </div>
         </div>
         <div
