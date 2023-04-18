@@ -21,6 +21,7 @@ const modalStyle = {
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
+  color: 'black'
 };
 
 const steps = ["About You (The Author)", "About the Newsletter", "For nujen"];
