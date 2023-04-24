@@ -1,8 +1,23 @@
 .main {
-  padding: 6rem;
+  padding-left: 6rem;
+  padding-right: 4rem;
   min-height: 100vh;
-  font-family: "Courier New";
-  background-color: lavender;
+  font-family: "DM Sans";
+  background-color: black;
+  color: white;
+}
+
+.listItem {
+  margin-bottom: 30px;
+}
+
+.listItemTitle {
+  font-size: 17px;
+  margin-right: 10px;
+}
+.joinBody {
+  margin-left: 39px;
+  margin-top: 50px;
 }
 
 .loader {
@@ -44,13 +59,67 @@
   flex-direction: column;
   align-items: start;
 }
-.header {
+.mainWrapper {
+  background-color: black;
+}
+
+.navButton2 {
+  background-color: black;
+  color: white;
+  transition: background-color .5s;
+}
+
+.committed {
+  margin-left: 39px;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.wishesWrapper {
+  font-size: 20px;
+}
+
+.listWish {
+  margin-left: 10px;
+}
+
+.committedTitle {
+  margin-left: 39px;
+  font-size: 60px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+.navButton2:hover {
+  background-color: white;
+  color: black;
+}
+.navButton {
+  background-color: white;
+  color: black;
+  transition: background-color .5s;
+}
+
+.navButton:hover {
+  background-color: black;
+  color: white;
+}
+
+.joinHeader {
   width: 100%;
   height: 60px;
   display: flex;
   align-items: center;
-  font-family: "Courier New";
-  background-color: lavender;
+  font-family: "DM Sans";
+  background-color: black;
+}
+.header {
+  padding-left: 6rem;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-family: "DM Sans";
+  background-color: black;
 }
 
 .modalStyle {
@@ -69,45 +138,81 @@
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
-  color: black;
-  font-family: "Nunito Sans";
-  color: #452c63;
 }
 
 .title {
-  text-align: center;
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
+  font-size: 96px;
   margin-bottom: 10px;
-  font-family: 'Chivo Mono', monospace;
-  font-style: italic;
-  font-weight: 900;
+  margin-left: 39px;
+  font-weight: bold;
+}
+
+.outerSquaresWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+  margin-left: 39px;
+  margin-right: 150px;
+}
+.innerSquaresWrapper {
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.squareTitle {
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+.squareTitle1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.dots {
+  color: rgb(203,201,248);
+}
+
+.square {
   color: black;
+  background-color: rgb(203,201,248);
+  flex: 1;
+  height: 400px;
+  border-radius: 20px;
+  padding: 70px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .date {
-  text-align: center;
-  font-size: 25px;
+  font-size: 18px;
+  margin-left: auto;
+}
+
+.titleWrapper {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  font-family: 'Chivo Mono', monospace;
-  font-style: italic;
-  font-weight: 4f00;
-  color: black;
+  flex-direction: row;
 }
 
 .subtitle {
-  text-align: center;
-  font-size: 26px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 70px;
-  font-family: 'Chivo Mono', monospace;
-  font-style: italic;
-  font-weight: 100;
-  color: black;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-left: 39px;
+  margin-top: 130px;
+  line-height: 1.4;
+  max-width: 500px;
+}
+
+.contact:hover {
+  color: white;
+  transition: color .5s;
+}
+.contact:hover {
+  color: grey;
 }
 
 .list {
@@ -116,7 +221,6 @@
 }
 
 .darkColor {
-  color: #000;
 }
 
 .note {
@@ -124,27 +228,22 @@
 }
 
 .handle {
-  font-family: 'Chivo Mono', monospace;
   font-style: normal;
   font-weight: 100;
-  color: blue;
+  color: rgb(203,201,248);
 }
 
 .wish {
-  font-family: 'Chivo Mono', monospace;
   font-style: italic;
-  font-weight: 600;
-  color: purple;
+  font-weight: bold;
+  margin-left: 5px;
 }
 
-.section {
-  font-size: 18px;
-  justify-content: center;
-  margin-bottom: 50px;
-  font-family: 'Chivo Mono', monospace;
-  font-style: normal;
-  font-weight: 400;
-  color: black;
+.readytocommit {
+  font-size: 40px;
+  margin-top: 60px;
+  margin-left: 39px;
+  padding-bottom: 30px;
 }
 
 .okText {
@@ -153,23 +252,38 @@
   font-size: 18px;
 }
 
-@media (max-width: 700px) {
-  .main {
-    padding: 2rem;
-    min-height: 100vh;
+@media (max-width: 1300px) {
+  .innerSquaresWrapper {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
   }
-
-@media (max-width: 700px) {
   .main {
-    padding: 2rem;
+    padding-left: 6rem;
+    padding-right: 4rem;
     min-height: 100vh;
+    font-family: "DM Sans";
+    background-color: black;
+    color: white;
   }
 }
 
-  @media (max-width: 700px) {
-    .main {
-      padding: 2rem;
-      min-height: 100vh;
-    }
+@media (max-width: 700px) {
+  .main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-height: 100vh;
+    font-family: "DM Sans";
+    background-color: black;
+    color: white;
+  }
+  .outerSquaresWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-left: 39px;
+    margin-right: 50px;
   }
 }

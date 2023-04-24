@@ -21,7 +21,6 @@ const modalStyle = {
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
-  color: 'black'
 };
 
 const steps = ["About You (The Author)", "About the Newsletter", "For nujen"];
@@ -78,6 +77,10 @@ export default function HorizontalLinearStepper() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
+  const joinPoh = () => {
+    router.push('/join')
+  }
+
   const onChange = (e, id) => {
     const val = e.target.value;
     if (id === "phone") {
@@ -105,14 +108,12 @@ export default function HorizontalLinearStepper() {
 
   return (
     <>
-      <style>
-        @import
-        url(&apos;https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;0,200;0,400;0,500;0,600;0,900;1,100;1,200;1,400;1,500;1,800;1,900&display=swap&apos;);
-      </style>
-      <div className={styles.title}>#66DaysOfPoH</div>
-      <div className={styles.date}>May 22-July 27, 2023</div>
-      <div className={styles.subtitle}>
+      <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'/>
+      <h2 className={styles.subtitle}>
         Put in 66 reps for the type of person you wish to become.
+      </h2>
+      <div className={styles.titleWrapper}>
+        <div className={styles.title}>66 Days of Poh</div>
       </div>
       <Modal
         open={open}
@@ -138,25 +139,22 @@ export default function HorizontalLinearStepper() {
           </div>
         </Box>
       </Modal>
-      <div style={{ display: "flex" }}>
-        <div style={{ display: "flex", flexDirection: "column", width: "50%" }}>
-          <div
-            style={{ marginBottom: "20px", color: '#000' }}
-            className={styles.section}
-          >
-            How it works:
+      <div className={styles.outerSquaresWrapper}>
+        <div className={styles.innerSquaresWrapper}>
+          <div className={styles.square}>
+              <div className={styles.squareTitle}> 1. Commit ✍️ </div>
+              <div>
+                Commit to the 66 days of PoH challenge. 
+                You have until April 24th, 2024 to join.
+              </div>
           </div>
-          <div style={{ marginBottom: "20px", color: '#000' }}>
-            <b className={styles.darkColor}>0. Commit</b> ✍️ <br />
-            Commit to the 66 days of PoH challenge by filling out the form
-            below. You have until April 24th, 2024 to join.
-          </div>
-          <div className={styles.darkColor} style={{ marginBottom: "20px" }}>
-            <b className={styles.darkColor}>1. Prime</b> 🫡 <br />
-            We&apos;ll be sending you 2 emails every week to prime you for the
-            challenge. These messages will teach you how to incorporate The Four
-            Laws of Behavior Change by James Clear.
-            <br />
+          <div className={styles.square}>
+            <div className={styles.squareTitle1}> 2. Prime 🤲️ </div>
+            <div>
+              We&apos;ll be sending you 2 messages every week to prime you for the
+              challenge. These messages will teach you how to incorporate The Four
+              Laws of Behavior Change by James Clear.
+            </div>
             <div className={styles.list}>
               <ul className={styles.darkColor}>
                 <li>April 24-May 1: Make it obvious</li>
@@ -166,107 +164,46 @@ export default function HorizontalLinearStepper() {
               </ul>
             </div>
           </div>
-          <div className={styles.darkColor} style={{ marginBottom: "20px" }}>
-            <b>2. Act</b> 👏
+        </div>
+        <div className={styles.innerSquaresWrapper}>
+          <div className={styles.square}>
+            <div className={styles.squareTitle1}> 3. Act 👏 </div>
             <br />
-            If you complete the assignments during the priming phase, you&apos;ll be
-            invited to 1) be the first users of PoH, and 2) participate in the
-            #66DaysOfPoH challenge.
-            <br />
+            <div style={{ marginBottom: '20px'}}>
+              If you complete the assignments during the priming phase, you&apos;ll be
+              invited to:
+            </div>
+            <div>
+              1) be one of the first users of PoH.
+            </div>
+            <div>
+              2) participate in the
+              #66DaysOfPoH challenge.
+            </div>
           </div>
-          <div className={styles.darkColor} style={{ marginBottom: "20px" }}>
-            <b>3. Celebrate</b> 🥳
+          <div className={styles.square}>
+            <div className={styles.squareTitle}> 4. Celebrate 🥳 </div>
             <br />
             Those who put in the reps at least 75% of the 66 days will receive a
             personalized digital collectible that represents their Proof of
             Habit.
           </div>
-          <div
-            style={{
-              marginTop: "20px",
-              marginBottom: "10px",
-              "font-family": "Chivo Mono, monospace",
-              "font-style": "italic",
-              "font-weight": 800,
-            }}
-            className={styles.section}
-          >
-            Ready to commit?
-          </div>
-          <div>
-            <span  className={styles.darkColor} style={{ marginRight: "10px" }}>Twitter Handle:</span>
-            <Input
-              placeholder="@seemcat"
-              variant="standard"
-              onChange={(e) => onChange(e, "handle")}
-            />
-          </div>
-          <div>
-            <span className={styles.darkColor} style={{ marginRight: "10px" }}>
-              The person you wish to become¹:
-            </span>
-            <br />
-            <textarea
-              placeholder="the type of person who never misses a workout"
-              variant="standard"
-              onChange={(e) => onChange(e, "wish")}
-            />
-          </div>
-          <div>
-            <span  className={styles.darkColor} style={{ marginRight: "10px" }}>Email</span>
-            <Input
-              placeholder="poh@gmail.com"
-              variant="standard"
-              onChange={(e) => onChange(e, "phone")}
-            />
-          </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginTop: "20px",
-              width: "50%",
-            }}
-          >
-            <Button variant="contained" onClick={submit}>
-              LFG
-            </Button>
-          </div>
-          <div className={styles.note}>
-            <div className={styles.darkColor}>
-            - - -
-            </div>
-            <br />
-            <div className={styles.darkColor}>
-              ¹ Think about the goal you want to achieve, and then the type of
-              person who can achieve this goal.
-            </div>
-            <br />
-            <br />
-            <div className={styles.darkColor}>
-              E.g. Goal = get a hot bod by summertime. Identity I aspire towards =
-              the type of person who never misses a workout.{" "}
-            </div>
-          </div>
-        </div>
-        <div
-          style={{
-            width: "50%",
-            paddingLeft: "30px",
-            borderLeft: "dashed 1px black",
-          }}
-        >
-          {list.map((poh) => {
-            return (
-              <div key={poh.handle}>
-                <span className={styles.handle}><a href={`https://twitter.com/${poh.handle}`}>{poh.handle}</a></span> <span className={styles.darkColor}> wishes to become </span><span className={styles.wish}>{poh.wish}</span>
-              </div>
-            );
-          })}
         </div>
       </div>
-      <br />
-      <br />
+      <div className={styles.readytocommit}>
+        Ready to commit?
+      </div>
+      <button style={{
+        marginLeft: '39px',
+        marginBottom: '100px',
+        borderRadius: '22px',
+        padding: '12px',
+        cursor: 'pointer',
+        border: '1px solid grey',
+        fontSize: '15px'
+        }}
+        className={styles.navButton}
+        onClick={joinPoh}> Join 66 Days of poh </button>
     </>
   );
 }

@@ -16,6 +16,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Button from "@mui/material/Button";
+import { style } from "@mui/system";
 
 export default function Signup() {
   const [user, setUser] = useContext(UserContext);
@@ -88,24 +89,49 @@ export default function Signup() {
     router.push("/");
   };
 
+  const joinPoh = () => {
+    router.push("/join");
+  };
+
   const handleClose = () => {
     setOpenDialog(false);
     router.push("/");
   };
   return (
-    <>
+    <div className={styles.mainWrapper}>
       <div className={styles.header}>
-        <h3
+        <p
           onClick={goBack}
           style={{
+            fontFamily: 'DM Sans',
             cursor: "pointer",
             marginLeft: "40px",
-            color: '#452c63',
-            fontSize: "24px",
+            color: 'white',
+            fontSize: "32px",
+            paddingTop: '20px'
           }}
         >
-          PoH
-        </h3>
+          poh
+        </p>
+        <div style={{ 
+          marginLeft: 'auto',
+          marginRight: '150px',
+          marginTop: '29px',
+          color: 'white',
+        }}>
+          <span style={{ marginRight: '20px', cursor: 'pointer' }} className={styles.contact}>
+            Contact
+          </span>
+          <button style={{
+            borderRadius: '22px',
+            padding: '12px',
+            cursor: 'pointer',
+            border: '1px solid grey',
+            fontSize: '15px'
+            }}
+            className={styles.navButton}
+            onClick={joinPoh}> Join us</button>
+        </div>
       </div>
       {view === "loading" && (
         <>
@@ -160,6 +186,6 @@ export default function Signup() {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 }
