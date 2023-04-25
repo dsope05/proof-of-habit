@@ -52,6 +52,28 @@ export default function Committed() {
         >
           poh
         </p>
+        <div className={styles.rightHeader}>
+          <Link
+            sx={{ color: 'white' }}
+            underline="none"
+            target="_blank"
+            rel="noopener"
+            href="https://twitter.com/proofofhabit"
+          >
+          <span style={{ marginRight: '20px', cursor: 'pointer' }} className={styles.contact}>
+            Twitter
+          </span>
+          </Link>
+          <button style={{
+            borderRadius: '22px',
+            padding: '12px',
+            cursor: 'pointer',
+            border: '1px solid grey',
+            fontSize: '15px'
+            }}
+            className={styles.navButton}
+            onClick={() => router.push('/join')}> Join poh </button>
+        </div>
         </div>
       <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'/>
       <div className={styles.committedTitle}>

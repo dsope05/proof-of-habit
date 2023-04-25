@@ -177,6 +177,7 @@
 .square {
   color: black;
   max-width: 800px;
+  width: 100%;
   background-color: rgb(203,201,248);
   flex: 1;
   height: 400px;
@@ -213,6 +214,14 @@
   transition: color .5s;
 }
 .contact:hover {
+  color: grey;
+}
+
+.contact1:hover {
+  color: white;
+  transition: color .5s;
+}
+.contact1:hover {
   color: grey;
 }
 
@@ -278,7 +287,200 @@
   }
 }
 
+@media (max-width: 820px) {
+  .title {
+    overflow-wrap: break-word;
+    inline-size: 550px;
+    font-size: 70px;
+    margin-bottom: 10px;
+    margin-left: 39px;
+    font-weight: bold;
+  }
+  .header {
+    padding-left: 0px;
+  }
+  .rightHeader {
+    margin-left: auto;
+    margin-top: 29px;
+    margin-right: 30px;
+    color: white;
+    display: flex;
+    flex: no-wrap;
+    align-items: center;
+  }
+  .main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-height: 100vh;
+    font-family: "DM Sans";
+    background-color: black;
+    color: white;
+  }
+  .outerSquaresWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-left: 39px;
+    margin-right: 50px;
+  }
+
+  .square {
+    align-items: center;
+    min-width: 275px;
+    width: 100%;
+    color: black;
+    max-width: 800px;
+    background-color: rgb(203,201,248);
+    flex: 1;
+    height: 400px;
+    border-radius: 20px;
+    padding: 40px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .squareTitle {
+    font-size: 25px;
+    margin-bottom: 60px;
+  }
+  .squareTitle1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+}
+
 @media (max-width: 700px) {
+  .header {
+    padding-left: 0px;
+  }
+  .rightHeader {
+    margin-left: auto;
+    margin-top: 29px;
+    margin-right: 30px;
+    color: white;
+    display: flex;
+    flex: no-wrap;
+    align-items: center;
+  }
+  .main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-height: 100vh;
+    font-family: "DM Sans";
+    background-color: black;
+    color: white;
+  }
+  .outerSquaresWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-left: 39px;
+    margin-right: 50px;
+  }
+
+  .square {
+    align-items: center;
+    min-width: 275px;
+    width: 100%;
+    color: black;
+    max-width: 800px;
+    background-color: rgb(203,201,248);
+    flex: 1;
+    height: 400px;
+    border-radius: 20px;
+    padding: 40px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .squareTitle {
+    font-size: 25px;
+    margin-bottom: 60px;
+  }
+  .squareTitle1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 380px) {
+  .title {
+    overflow-wrap: break-word;
+    inline-size: 300px
+  }
+  .contact {
+    display: none;
+  }
+  .header {
+    padding-left: 0px;
+  }
+  .rightHeader {
+    margin-left: auto;
+    margin-top: 29px;
+    margin-right: 30px;
+    color: white;
+    display: flex;
+    flex: no-wrap;
+    align-items: center;
+  }
+  .main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-height: 100vh;
+    font-family: "DM Sans";
+    background-color: black;
+    color: white;
+  }
+  .outerSquaresWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-left: 39px;
+    margin-right: 50px;
+  }
+
+  .square {
+    align-items: center;
+    min-width: 275px;
+    color: black;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgb(203,201,248);
+    flex: 1;
+    height: 400px;
+    border-radius: 20px;
+    padding: 40px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .squareTitle {
+    font-size: 25px;
+    margin-bottom: 60px;
+  }
+  .squareTitle1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 290px) {
+  .title {
+    overflow-wrap: break-word;
+    inline-size: 300px
+  }
+  .contact {
+    display: none;
+  }
+  .contact1 {
+    display: none;
+  }
   .header {
     padding-left: 0px;
   }
@@ -314,6 +516,7 @@
     max-width: 800px;
     background-color: rgb(203,201,248);
     flex: 1;
+    width: 100%;
     height: 400px;
     border-radius: 20px;
     padding: 40px;

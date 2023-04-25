@@ -83,7 +83,23 @@ export default function Join() {
         >
           poh
         </p>
+        <div className={styles.rightHeader}>
+          <Link
+            sx={{ color: 'white' }}
+            underline="none"
+            target="_blank"
+            rel="noopener"
+            href="https://twitter.com/proofofhabit"
+          >
+          <span style={{ marginRight: '20px', cursor: 'pointer' }} className={styles.contact}>
+            Twitter
+          </span>
+          </Link>
+          <span onClick={() => router.push('/committed')} style={{ marginRight: '20px', cursor: 'pointer' }} className={styles.contact1}>
+            Cohort 1
+          </span>
         </div>
+      </div>
       <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'/>
       <Modal
         open={open}
@@ -93,7 +109,7 @@ export default function Join() {
       >
         <Box sx={modalStyle}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            You&apos;re in! Now, for your first assignment: tell your friends you have committed to the #66DaysOfPoH challenge.
+            You&apos;re in! Now, tell your friends you&apos;ve committed to the #66DaysOfPoH challenge.
           </Typography>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Link

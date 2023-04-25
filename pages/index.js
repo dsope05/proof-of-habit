@@ -126,6 +126,9 @@ export default function Signup() {
             Twitter
           </span>
           </Link>
+          <span onClick={() => router.push('/committed')} style={{ marginRight: '20px', cursor: 'pointer' }} className={styles.contact1}>
+            Cohort 1
+          </span>
           <button style={{
             borderRadius: '22px',
             padding: '12px',

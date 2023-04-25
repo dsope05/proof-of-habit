@@ -104,7 +104,6 @@ export default function HorizontalLinearStepper() {
         openModal(true);
       });
   };
-  console.log('list', list)
 
   return (
     <>
@@ -113,7 +112,7 @@ export default function HorizontalLinearStepper() {
         Put in 66 reps for the type of person you wish to become.
       </h2>
       <div className={styles.titleWrapper}>
-        <div className={styles.title}>66 Days of Poh</div>
+        <div className={styles.title}>#66DaysofPoH</div>
       </div>
       <Modal
         open={open}
@@ -144,16 +143,16 @@ export default function HorizontalLinearStepper() {
           <div className={styles.square}>
               <div className={styles.squareTitle}> 1. Commit ✍️ </div>
               <div>
-                Commit to the 66 days of PoH challenge. 
-                You have until April 24th, 2024 to join.
+                Commit to the #66DaysOfPoH priming phase. 
+                You have until April 28th, 2023 to join.
               </div>
           </div>
           <div className={styles.square}>
             <div className={styles.squareTitle1}> 2. Prime 🤲️ </div>
             <div>
-              We&apos;ll be sending you 2 messages every week to prime you for the
-              challenge. These messages will teach you how to incorporate The Four
-              Laws of Behavior Change by James Clear.
+              We&apos;ll be sending you one email every week to prime you for the
+              challenge. These emails will teach you how to incorporate The Four
+              Laws of Behavior Change through simple exercises.
             </div>
             <div className={styles.list}>
               <ul className={styles.darkColor}>
@@ -170,15 +169,15 @@ export default function HorizontalLinearStepper() {
             <div className={styles.squareTitle1}> 3. Act 👏 </div>
             <br />
             <div style={{ marginBottom: '20px'}}>
-              If you complete the assignments during the priming phase, you&apos;ll be
+              If you complete the exercises during the priming phase, you&apos;ll be
               invited to:
             </div>
             <div>
-              1) be one of the first users of PoH.
+              1) be one of the first users of the PoH app
             </div>
             <div>
               2) participate in the
-              #66DaysOfPoH challenge.
+              #66DaysOfPoH challenge
             </div>
           </div>
           <div className={styles.square}>
