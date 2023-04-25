@@ -135,7 +135,7 @@ export default function Join() {
           <textarea
             style={{ fontFamily: 'DM Sans', fontSize: '16px'}}
             rows="6"
-            cols="40"
+            cols="30"
             placeholder="the type of person who never misses a workout"
             variant="standard"
             onChange={(e) => onChange(e, "wish")}

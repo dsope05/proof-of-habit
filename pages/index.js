@@ -113,12 +113,7 @@ export default function Signup() {
         >
           poh
         </p>
-        <div style={{ 
-          marginLeft: 'auto',
-          marginRight: '150px',
-          marginTop: '29px',
-          color: 'white',
-        }}>
+        <div className={styles.rightHeader}>
           <span style={{ marginRight: '20px', cursor: 'pointer' }} className={styles.contact}>
             Contact
           </span>
@@ -130,7 +125,7 @@ export default function Signup() {
             fontSize: '15px'
             }}
             className={styles.navButton}
-            onClick={joinPoh}> Join us</button>
+            onClick={joinPoh}> Join poh </button>
         </div>
       </div>
       {view === "loading" && (

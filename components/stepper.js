@@ -203,7 +203,7 @@ export default function HorizontalLinearStepper() {
         fontSize: '15px'
         }}
         className={styles.navButton}
-        onClick={joinPoh}> Join 66 Days of poh </button>
+        onClick={joinPoh}> Join for Free </button>
     </>
   );
 }
