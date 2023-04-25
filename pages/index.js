@@ -17,6 +17,7 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Button from "@mui/material/Button";
 import { style } from "@mui/system";
+import Link from "@mui/material/Link";
 
 export default function Signup() {
   const [user, setUser] = useContext(UserContext);
@@ -114,9 +115,17 @@ export default function Signup() {
           poh
         </p>
         <div className={styles.rightHeader}>
+          <Link
+            sx={{ color: 'white' }}
+            underline="none"
+            target="_blank"
+            rel="noopener"
+            href="https://twitter.com/proofofhabit"
+          >
           <span style={{ marginRight: '20px', cursor: 'pointer' }} className={styles.contact}>
-            Contact
+            Twitter
           </span>
+          </Link>
           <button style={{
             borderRadius: '22px',
             padding: '12px',
