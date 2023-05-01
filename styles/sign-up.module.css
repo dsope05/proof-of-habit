@@ -1,4 +1,5 @@
 .main {
+  max-width: 1400px;
   padding-left: 6rem;
   padding-right: 4rem;
   min-height: 100vh;
@@ -116,9 +117,9 @@
   padding-left: 6rem;
   width: 100%;
   height: 60px;
+  max-width: 1400px;
   display: flex;
   align-items: center;
-  font-family: "DM Sans";
   background-color: black;
 }
 

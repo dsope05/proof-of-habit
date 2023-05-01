@@ -37,6 +37,7 @@ export default function Committed() {
   console.log('list', list)
 
   return (
+    <div style={{ backgroundColor: 'black', paddingBottom: '40px' }}>
     <div className={styles.main}>
       <div className={styles.joinHeader}>
         <p
@@ -97,5 +98,6 @@ export default function Committed() {
             })}
       </div>
     </div>
+  </div>
   );
 }

@@ -68,6 +68,7 @@ export default function Join() {
   };
 
   return (
+    <div style={{ backgroundColor: 'black' }}>
     <div className={styles.main}>
       <div className={styles.joinHeader}>
         <p
@@ -201,5 +202,6 @@ export default function Join() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
