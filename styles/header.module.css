@@ -1,116 +1,51 @@
-.main {
-  padding: 6rem;
-  min-height: 100vh;
-  font-family: "Nunito Sans";
-  background-color: lavender;
-}
-
-.loader {
-  display: flex;
-  justify-content: center;
-}
-
-.topLabel {
-  align-self: flex-start;
-  font-family: "Nunito Sans",
-}
-
-.loader {
-  display: flex;
-  justify-content: center;
-}
-
-.topLabel {
-  align-self: flex-start;
-  font-family: "Nunito Sans",
-}
-
-.label {
-  align-self: flex-start;
-  margin-top: 20px;
-  font-family: "Nunito Sans",
-}
-
-.textInput {
-  background-color: white;
-  margin-bottom: 10px;
-  width: 30%;
-  font-family: "Nunito Sans",
-}
-
-.stepperContainer {
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
 .header {
+  padding-left: 6rem;
   width: 100%;
   height: 60px;
   display: flex;
   align-items: center;
-  font-family: "Nunito Sans";
-  background-color: lavender;
+  font-family: "DM Sans";
+  background-color: black;
+  max-width: 1400px;
 }
 
-.modalStyle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400;
-  background-color: white;
-  border: 2px solid #000;
-  box-shadow: 24;
+.rightHeader {
+  margin-left: auto;
+  margin-right: 150px;
+  margin-top: 29px;
+  color: white;
 }
 
-.tagline {
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-  color: black;
-  font-family: "Nunito Sans";
-  color: #452c63;
+.contact:hover {
+  color: white;
+  transition: color .5s;
+}
+.contact:hover {
+  color: grey;
 }
 
-.title {
-  text-align: center;
-  font-size: 36px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-  font-family: "Nunito Sans";
-  color: black;
+.contact1:hover {
+  color: white;
+  transition: color .5s;
+}
+.contact1:hover {
+  color: grey;
 }
 
-.okText {
-  font-weight: bold;
-  font-style: italic;
-  font-size: 18px;
-}
-
-@media (max-width: 700px) {
-  .main {
-    padding: 2rem;
-    min-height: 100vh;
-    background: linear-gradient(to bottom,transparent,rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-    background-color: #452c63;
+@media (max-width: 380px) {
+  .contact {
+    display: none;
   }
-
-@media (max-width: 700px) {
-  .main {
-    padding: 2rem;
-    min-height: 100vh;
-    background: linear-gradient(to bottom,transparent,rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-    background-color: #452c63;
+  .header {
+    padding-left: 0px;
   }
-}
-
-  @media (max-width: 700px) {
-    .main {
-      padding: 2rem;
-      min-height: 100vh;
-    }
+  .rightHeader {
+    margin-left: auto;
+    margin-top: 29px;
+    margin-right: 30px;
+    color: white;
+    display: flex;
+    flex: no-wrap;
+    align-items: center;
   }
 }

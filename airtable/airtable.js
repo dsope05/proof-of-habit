@@ -73,6 +73,56 @@ export const createFreeTrialRecord = ({ email, handle }) => {
     }
   );
 };
+
+export function submitProofAirtable({ dataUrl, res, email }) {
+  base("proof").create(
+    [
+      {
+        fields: {
+          email,
+          proof: dataUrl,
+        },
+      },
+    ],
+    function (err, records) {
+      if (err) {
+        console.error(err);
+        res.status(200).json({ status: "error", err });
+        return;
+      }
+      records.forEach(function (record) {
+        console.log(record.getId());
+      });
+      res.status(200).json({ records });
+    }
+  );
+}
+
+export const queryProofs = ({ res }) => {
+  const allProofs = [];
+  base('proof').select({
+    maxRecords: 100,
+    view: "Grid view"
+  }).eachPage(function page(records, fetchNextPage) {
+    // This function (`page`) will get called for each page of records.
+
+    records.forEach(function(record) {
+        console.log('Retrieved', record.get('email'));
+        allProofs.push({
+          image: record.get('proof'),
+        })
+    });
+
+    // To fetch the next page of records, call `fetchNextPage`.
+    // If there are more records, `page` will get called again.
+    // If there are no more records, `done` will get called.
+    fetchNextPage();
+
+  }, function done(err) {
+    res.send(allProofs)
+    if (err) { console.error(err); return; }
+  });
+}
 export const queryPoH = ({ res }) => {
   const allPoH = [];
   base('PoH').select({
