@@ -113,6 +113,16 @@
   font-family: "DM Sans";
   background-color: black;
 }
+.header1 {
+  padding-left: 9rem;
+  width: 100%;
+  height: 60px;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+
 .header {
   padding-left: 6rem;
   width: 100%;
@@ -298,6 +308,9 @@
   .header {
     padding-left: 0px;
   }
+  .header1 {
+    padding-left: 2rem;
+  }
   .rightHeader {
     margin-left: auto;
     margin-top: 29px;
@@ -359,6 +372,9 @@
   }
   .header {
     padding-left: 0px;
+  }
+  .header1 {
+    padding-left: 2rem;
   }
   .rightHeader {
     margin-left: auto;
@@ -427,6 +443,9 @@
   .header {
     padding-left: 0px;
   }
+  .header1 {
+    padding-left: 2rem;
+  }
   .rightHeader {
     margin-left: auto;
     margin-top: 29px;
@@ -492,6 +511,9 @@
   }
   .header {
     padding-left: 0px;
+  }
+  .header1 {
+    padding-left: 2rem;
   }
   .rightHeader {
     margin-left: auto;

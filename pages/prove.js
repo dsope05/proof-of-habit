@@ -7,6 +7,7 @@ export default function Proof () {
     <div style={{ backgroundColor: 'black'}}>
       <Header />
       <div className={styles.main}>
+        <div style={{ marginBottom: '20px'}} className={styles.title}>Proof of Habit </div>
         <Camera />
       </div>
     </div>
