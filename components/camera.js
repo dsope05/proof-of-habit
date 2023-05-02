@@ -95,7 +95,7 @@ const Camera = () => {
           <Button variant="contained" sx={{ marginTop: '10px', marginBottom: '20px' }} onClick={capturePhoto}>Take Photo</Button>
         )}
         <div style={{ marginBottom: '20px'}}>
-          EMAIL: <Input sx={{ backgroundColor: 'white'}} style={{ marginLeft: '10px', marginBottom: '30px' }} onChange={change}/>
+          EMAIL: <input style={{ marginLeft: '10px', marginBottom: '30px' }} onChange={change}/>
         </div>
           <Button variant="contained" onClick={submit}>Submit Proof of Habit</Button>
       </div>
