@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import React, { useRef, useEffect, useState } from 'react';
 import styles from "../styles/proof.module.css";
+import Button from "@mui/material/Button";
+import Input from "@mui/material/Input";
 
 const Camera = () => {
   const videoRef = useRef(null);
@@ -86,16 +88,16 @@ const Camera = () => {
         <video ref={videoRef} className={styles.video} autoPlay playsInline muted></video>
         <canvas ref={canvasRef} className={styles["captured-image"]} style={{ display: 'none' }}></canvas>
       </div>
-      <div>
+      <div style={{ marginTop: '10px', marginBottom: '20px'}}>
         {captured ? (
-          <button style={{ marginTop: '10px', marginBottom: '20px' }} onClick={retakePhoto}>Retake Photo</button>
+          <Button variant="contained" sx={{ marginTop: '10px', marginBottom: '20px' }} onClick={retakePhoto}>Retake Photo</Button>
         ) : (
-          <button style={{ marginTop: '10px', marginBottom: '20px' }} onClick={capturePhoto}>Take Photo</button>
+          <Button variant="contained" sx={{ marginTop: '10px', marginBottom: '20px' }} onClick={capturePhoto}>Take Photo</Button>
         )}
-        <div>
-          Email: <input style={{ marginLeft: '10px', marginBottom: '30px' }} onChange={change}/>
+        <div style={{ marginBottom: '20px'}}>
+          EMAIL: <Input sx={{ backgroundColor: 'white'}} style={{ marginLeft: '10px', marginBottom: '30px' }} onChange={change}/>
         </div>
-          <button onClick={submit}>Submit</button>
+          <Button variant="contained" onClick={submit}>Submit Proof of Habit</Button>
       </div>
     </div>
   );

@@ -8,12 +8,11 @@ const Header = () => {
     router.push('/');
   };
   return (
-      <div className={styles.header}>
+      <div className={styles.header1}>
         <p
           onClick={goBack}
           style={{
             cursor: "pointer",
-            marginLeft: "40px",
             color: 'white',
             fontSize: "32px",
             paddingTop: '20px'

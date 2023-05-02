@@ -86,13 +86,11 @@ export function submitProofAirtable({ dataUrl, res, email }) {
     ],
     function (err, records) {
       if (err) {
-        console.error('SUBMIT PROOF ERROR', err);
         res.status(200).json({ status: "error", err });
         return;
       }
       records.forEach(function (record) {
         console.log(record.getId());
-        console.log('RECORD RES', record.get('email'));
       });
       res.status(200).json({ records });
     }
