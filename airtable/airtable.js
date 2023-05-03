@@ -74,11 +74,13 @@ export const createFreeTrialRecord = ({ email, handle }) => {
   );
 };
 
-export function submitProofAirtable({ dataUrl, res, email }) {
+export function submitProofAirtable({ dataUrl, res, email, rep, twitter }) {
   base("proof").create(
     [
       {
         fields: {
+          rep,
+          twitter,
           email,
           proof: dataUrl,
         },
@@ -109,6 +111,9 @@ export const queryProofs = ({ res }) => {
         console.log('Retrieved', record.get('email'));
         allProofs.push({
           image: record.get('proof'),
+          twitter: record.get('twitter'),
+          rep: record.get('rep'),
+          email: record.get('email'),
         })
     });
 

@@ -10,6 +10,8 @@ const Camera = () => {
   const [captured, setCaptured] = useState(false);
   const [dataUrl, setDataUrl] = useState('');
   const [email, setEmail] = useState('');
+  const [rep, setRep] = useState('');
+  const [twitter, setTwitter] = useState('');
   const router = useRouter();
 
   useEffect(() => {
@@ -57,13 +59,18 @@ const Camera = () => {
     setCaptured(false);
   };
 
-  const change = (e) => {
-    setEmail(e.target.value)
+  const change = (e, name) => {
+    const val = e.target.value;
+    if (name === 'email') {
+      setEmail(e.target.value)
+    } else if (name === 'twitter') {
+      setTwitter(e.target.value)
+    } else if (name === 'rep')
+      setRep(e.target.value)
   }
 
   const submit = async () => {
-    console.log('DDD', email)
-    if (dataUrl && email) {
+    if (dataUrl && email && rep && twitter) {
       await fetch("/api/submitProof", {
         method: "POST",
         headers: {
@@ -72,6 +79,8 @@ const Camera = () => {
         body: JSON.stringify({
           dataUrl,
           email,
+          rep,
+          twitter,
         })
       })
         .then((res) => res.json())
@@ -94,8 +103,14 @@ const Camera = () => {
         ) : (
           <Button variant="contained" sx={{ marginTop: '10px', marginBottom: '20px' }} onClick={capturePhoto}>Take Photo</Button>
         )}
+        <div style={{ marginBottom: '10px'}}>
+          EMAIL: <input style={{ marginLeft: '10px' }} onChange={(e) => change(e, 'email')}/>
+        </div>
+        <div style={{ marginBottom: '10px'}}>
+          TWITTER: <input style={{ marginLeft: '10px' }} onChange={(e) => change(e, 'twitter')}/>
+        </div>
         <div style={{ marginBottom: '20px'}}>
-          EMAIL: <input style={{ marginLeft: '10px', marginBottom: '30px' }} onChange={change}/>
+          REP #: <input style={{ marginLeft: '10px', marginBottom: '30px' }} onChange={(e) => change(e, 'rep')}/>
         </div>
           <Button variant="contained" onClick={submit}>Submit Proof of Habit</Button>
       </div>

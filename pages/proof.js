@@ -3,18 +3,33 @@ import styles from "../styles/proof.module.css";
 import Header from "../components/header";
 
 const ImageGrid = ({ images }) => {
+  images = images.slice(0,3)
   return (
     <div className={styles["image-grid"]}>
       {images.map((image, index) => {
-        let gridItem;
-        if(index%3 === 0 && index > 0) {
-          gridItem = 'grid-item-x'
+        console.log('imaaa', image)
+        const twitter = image.twitter || '';
+        let color;
+        if(index%3 === 0) {
+          color = 'pink'
+        } else if (index%2 === 0){
+          color = 'blue'
         } else {
-          gridItem = 'grid-item-1'
+          color = 'green'
         }
+        console.log('twitter', twitter)
+        const handle = twitter[0] === '@' ? twitter : '@' + twitter;
         return (
-          <div key={index} className={`${styles['grid-item']} ${styles[gridItem]}`}>
-            <img src={image.image} alt={`Random sized image ${index}`} />
+          <div key={index} className={`${styles['grid-item']} ${styles['grid-item-1']}`}>
+            <div className={`${styles.polariod} ${styles[color]}`}>
+              <img className={styles.picture} src={image.image} alt={`Random sized image ${index}`} />
+              <span style={{ marginLeft: '3px', fontSize: '13px', fontWeight: 'bold', fontStyle: 'italic', color: 'black', marginRight: '5px'}}>
+                {handle}
+              </span>
+              <span style={{ color: 'black', fontStyle: 'italic', fontSize: '12px'}}>
+                #{image.rep}
+              </span>
+            </div>
           </div>
         )})}
     </div>
