@@ -127,6 +127,35 @@ export const queryProofs = ({ res }) => {
     if (err) { console.error(err); return; }
   });
 }
+
+export const queryUserProofs = ({ res, handle }) => {
+  const allProofs = [];
+  base('proof').select({
+    maxRecords: 100,
+    view: "Grid view",
+    filterByFormula: `FIND("${handle}", twitter)`,
+  }).eachPage(function page(records, fetchNextPage) {
+    // This function (`page`) will get called for each page of records.
+
+    records.forEach(function(record) {
+        allProofs.push({
+          image: record.get('proof'),
+          twitter: record.get('twitter'),
+          rep: record.get('rep'),
+          email: record.get('email'),
+        })
+    });
+
+    // To fetch the next page of records, call `fetchNextPage`.
+    // If there are more records, `page` will get called again.
+    // If there are no more records, `done` will get called.
+    fetchNextPage();
+
+  }, function done(err) {
+    res.send(allProofs)
+    if (err) { console.error(err); return; }
+  });
+}
 export const queryPoH = ({ res }) => {
   const allPoH = [];
   base('PoH').select({
