@@ -75,7 +75,6 @@ export const createFreeTrialRecord = ({ email, handle }) => {
 };
 
 export function submitProofAirtable({ dataUrl, res, email, rep, twitter }) {
-  console.log('subMIT', typeof dataUrl)
   base("proof").create(
     [
       {

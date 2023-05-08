@@ -6,7 +6,6 @@ const ImageGrid = ({ images }) => {
   return (
     <div className={styles["image-grid"]}>
       {images.map((image, index) => {
-        console.log('imaaa', image)
         const twitter = image.twitter || '';
         let color;
         if(index%3 === 0) {
@@ -16,7 +15,6 @@ const ImageGrid = ({ images }) => {
         } else {
           color = 'green'
         }
-        console.log('twitter', twitter)
         const handle = twitter[0] === '@' ? twitter : '@' + twitter;
         return (
           <div key={index} className={`${styles['grid-item']} ${styles['grid-item-1']}`}>
@@ -49,7 +47,6 @@ export default function Proof () {
     };
     queryProofs();
   }, []);
-  console.log('proofs', proofs)
 
   return (
     <div style={{ backgroundColor: 'black'}}>
